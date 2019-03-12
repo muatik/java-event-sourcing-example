@@ -17,4 +17,5 @@ public class Order implements RepositoryEntry<OrderId> {
     final private long amount;
     final private Instant createdAt;
     final private Instant updatedAt;
+    final private long version;
 }

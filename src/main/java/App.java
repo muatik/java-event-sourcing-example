@@ -16,7 +16,7 @@ public class App {
         final EventProcessor eventProcessor = new EventProcessor(orderRepository, eventRepository);
         final OrderId orderId = OrderId.of("my-order");
 
-        eventProcessor.createEvent(CreateEvent.of(orderId, 10000));
+        eventProcessor.processCreateEvent(CreateEvent.of(orderId, 10000));
         Stream.of(
                 PaymentEvent.of(orderId),
                 RefundEvent.of(orderId),

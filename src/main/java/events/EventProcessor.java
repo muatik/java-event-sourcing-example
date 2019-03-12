@@ -16,7 +16,7 @@ public class EventProcessor {
         this.eventRepository = eventRepository;
     }
 
-    public void createEvent(CreateEvent createEvent) {
+    public void processCreateEvent(CreateEvent createEvent) {
         final Order newOrder = Aggregator.createNewEvent(createEvent);
         eventRepository.save(createEvent);
         orderRepository.save(newOrder);
