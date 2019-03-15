@@ -1,4 +1,4 @@
-package com.muatik.eventsourcingwithspringkafka;
+package com.muatik.eventsourcingwithspringkafka.eventapi;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -20,6 +20,7 @@ import java.util.Map;
 @Configuration
 @EnableKafka
 public class KafkaConfig {
+
     @Bean
     ConcurrentKafkaListenerContainerFactory<String, String>
     kafkaListenerContainerFactory() {
